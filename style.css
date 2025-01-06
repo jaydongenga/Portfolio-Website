@@ -1,0 +1,458 @@
+/* General Styles */
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+    height: 100vh; /* Ensure the body takes up full height */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    padding-top: 60px; /* Ensure content is not hidden behind the fixed navbar */
+    margin: 0; /* Make sure no unwanted margins on the body */
+}
+
+/* Header Styles - Navigation Bar */
+header {
+    background-color: #003366; /* Dark Blue */
+    color: #fff;
+    padding: 10px 20px; /* Reduce padding for a thinner bar */
+    position: fixed; /* Fix the header at the top */
+    width: 100%; /* Ensure it spans the full width of the screen */
+    top: 0; /* Pin to the top of the screen */
+    left: 0;
+    z-index: 1000; /* Ensure it stays on top of other content */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Darker shadow */
+    border-bottom: none; /* Ensure no unwanted borders */
+    margin-bottom: 0; /* Remove any margin below the navbar */
+}
+
+/* Ensure the main content starts below the fixed navbar */
+main {
+    margin-top: 60px; /* Adjust the margin to prevent overlap with navbar */
+}
+
+/* Ensure no margins/paddings from surrounding elements */
+.container {
+    max-width: 1200px;
+    margin: 0 auto; /* Center the content */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.5rem; /* Smaller font size for a thinner bar */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00b3b3; /* Light Teal */
+}
+
+/* Remove any unwanted white space under navbar */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Hero Section */
+#hero {
+    background-color: #003366; /* Dark Blue */
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px; /* Increased padding for full-screen effect */
+    min-height: 100vh; /* Ensure it covers full screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+#hero .btn {
+    background-color: #00b3b3; /* Light Teal */
+    color: #003366;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#hero .btn:hover {
+    background-color: #009999; /* Darker Teal */
+}
+
+/* About Section */
+#about, #skills-education, #projects, #contact {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    min-height: 100vh; /* Ensure each section takes up full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#about h2, #skills-education h2, #projects h2, #contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #003366; /* Dark Blue */
+}
+
+#about p, #skills-education p {
+    font-size: 1.1rem;
+    color: #333;
+    text-align: center;
+    max-width: 800px;
+}
+
+
+
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Adjust to fit 4 items per row */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.skill {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-weight: 600;
+    transition: transform 0.3s;
+    
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    background-color: #003366; /* Dark Blue on hover */
+    color: #fff;
+}
+
+/* Optional - Skill text customization */
+.skill {
+    font-size: 1rem;
+}
+
+.skill h3 {
+    color: #003366; /* Dark Blue */
+    font-size: 1.5rem; /* Adjust the size of the heading */
+    margin-bottom: 10px; /* Space between the heading and list */
+}
+
+.skill p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+
+
+/* Education Section */
+.education {
+    text-align: left; /* Align text to the left */
+    margin-bottom: 20px; /* Space below the section */
+}
+
+.education h3 {
+    font-size: 1.5rem; /* Adjust the size of the heading */
+    margin-bottom: 10px; /* Space between the heading and list */
+}
+
+
+
+.education ul {
+    list-style: none; /* Remove default list styling */
+    padding-left: 0; /* Remove padding */
+}
+
+.education ul li {
+    font-size: 1.1rem; /* Adjust font size for readability */
+    margin-bottom: 10px; /* Add space between list items */
+}
+
+
+
+
+
+
+
+/* Projects Section */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.project {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project h3 {
+    color: #003366; /* Dark Blue */
+    margin-bottom: 10px;
+}
+
+.project p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.project a {
+    color: #003366; /* Dark Blue */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.project a:hover {
+    color: #00b3b3; /* Light Teal */
+}
+
+
+
+/* Style for the contact section */
+#contact {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.contact-info li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.contact-info a {
+    color: #003366;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: #00b3b3; /* Light Teal */
+}
+
+
+
+
+
+
+/* Scroll-to-top Button */
+#scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #003366; /* Dark Blue */
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#scroll-to-top:hover {
+    background-color: #00b3b3; /* Light Teal */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #003366; /* Dark Blue */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+
+
+/* General mobile responsiveness */
+@media (max-width: 768px) {
+    body {
+        padding-top: 50px; /* Adjust padding for smaller screens */
+    }
+
+    header .container {
+        flex-direction: column; /* Stack the nav items for mobile */
+        align-items: center; /* Center align the nav items */
+    }
+
+    header h1 {
+        font-size: 1.2rem; /* Smaller heading for mobile */
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row; /* Horizontally space out nav items */
+        justify-content: center; /* Center the nav items horizontally */
+        margin-top: 10px;
+        padding-left: 0; /* Remove default padding */
+        width: 100%; /* Make sure it spans the full width */
+    }
+
+    nav ul li {
+        margin: 0 15px; /* Add space between each nav item */
+    }
+
+    #hero {
+        padding: 80px 20px; /* Adjust padding for mobile */
+    }
+
+    #hero h2 {
+        font-size: 2rem; /* Smaller font size for mobile */
+    }
+
+    #hero p {
+        font-size: 1rem; /* Smaller text size for mobile */
+    }
+
+    #hero .btn {
+        font-size: 1rem; /* Smaller button for mobile */
+        padding: 8px 16px;
+    }
+
+    #about h2, #skills-education h2, #projects h2, #contact h2 {
+        font-size: 1.5rem; /* Smaller heading for mobile */
+    }
+
+    #about p, #skills-education p {
+        font-size: 1rem; /* Adjust text size for readability */
+    }
+
+    /* Skills Section */
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr); /* Stack skill items on mobile */
+    }
+
+    /* Education Section */
+    .education ul li {
+        font-size: 1rem; /* Adjust font size for mobile */
+    }
+
+    /* Projects Section */
+    .projects {
+        grid-template-columns: repeat(2, 1fr); /* Stack project items on mobile */
+    }
+
+    /* Contact Section */
+    .contact-info li {
+        font-size: 1rem; /* Adjust font size for mobile */
+    }
+
+    /* Scroll-to-top Button */
+    #scroll-to-top {
+        font-size: 1.2rem; /* Smaller button size for mobile */
+        bottom: 20px; /* Adjust button position for mobile */
+        right: 20px;
+    }
+
+    /* Footer Styles */
+    footer p {
+        font-size: 0.9rem; /* Smaller text for mobile */
+    }
+}
+
+/* Additional responsiveness for very small screens (phones) */
+@media (max-width: 480px) {
+    header .container {
+        padding: 10px 20px; /* Adjust padding for very small screens */
+    }
+
+    nav ul li {
+        margin: 0 10px; /* Adjust spacing between items for very small screens */
+    }
+
+    #hero h2 {
+        font-size: 1.5rem; /* Even smaller font size for very small screens */
+    }
+
+    #hero .btn {
+        padding: 6px 12px; /* Smaller button for very small screens */
+    }
+
+    /* Skills Section */
+    .skills-grid {
+        grid-template-columns: 1fr; /* Stack skills vertically */
+    }
+
+    /* Projects Section */
+    .projects {
+        grid-template-columns: 1fr; /* Stack projects vertically */
+    }
+
+    footer p {
+        font-size: 0.8rem; /* Even smaller text for very small screens */
+    }
+}
